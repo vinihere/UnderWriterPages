@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .money {
+        position: absolute;
+        pointer-events: none;
+    }
+</style>
+</head>
+<body>
+    <script>
+        // Number of money images to create
+        var numMoney = 50;
+
+        // Function to generate a random number within a range
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        // Function to create a money image element
+        function createMoneyElement() {
+            var moneyImg = document.createElement("img");
+            moneyImg.src = "/home/a3sdsk071/Pictures/Pictures/carMoving.png"; // Replace with the path to your money image
+            moneyImg.classList.add("money");
+            return moneyImg;
+        }
+
+        // Function to animate the money images
+        function animateMoney(moneyElement) {
+            var startLeft = randomInRange(0, window.innerWidth);
+            var endLeft = randomInRange(0, window.innerWidth);
+            var duration = randomInRange(3000, 8000);
+
+            moneyElement.style.left = startLeft + "px";
+            moneyElement.style.animation = `fall ${duration}ms linear infinite`;
+            moneyElement.style.animationDelay = randomInRange(0, duration) + "ms";
+            moneyElement.style.animationTimingFunction = "cubic-bezier(.25,.55,.45,.95)";
+
+            setTimeout(function() {
+                moneyElement.style.left = endLeft + "px";
+            }, 50);
+        }
+
+        // Create and animate the money images
+        for (var i = 0; i < numMoney; i++) {
+            var moneyElement = createMoneyElement();
+            document.body.appendChild(moneyElement);
+            animateMoney(moneyElement);
+        }
+    </script>
+</body>
+</html>

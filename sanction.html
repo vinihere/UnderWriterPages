@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="icon" href="institute-1.1s-200px.png">
+<script type="text/javascript" src="navbar.js"></script>
+<link rel="stylesheet" href="layout.css">
+<link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="navbar.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<style>
+    .bg_image {
+
+        background-image: url('images/2.png');
+
+
+
+        height: 100vh;
+
+        z-index: -2;
+
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+ 
+
+    .projects-section {
+        flex: 2;
+
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+
+    /*table*/
+    
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+</style>
+
+<body>
+    <header>
+      <a href="/" class="logo">
+        <img src="Mufin-logo.png" width="150" height="50">
+       
+    </a>
+
+        <nav class="navbar">
+
+            <!-- <a href="home.html" class="active" target="_parent">Home</a> -->
+           
+            
+            <!-- <a href="contactus.html" target="_self">Contact Us</a> -->
+            <button class="profile-btn">
+                <img src="Screenshot_20210923-213001_Gallery.jpg" />
+                <span><h1>UnderWriter</h1></span>
+            </button>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <div class="bg_image"></div>
+
+
+        <div class="app-container">
+
+            <div class="app-content">
+                <div class="app-sidebar">
+                  <a href="index.html">Kyc Approve</a>
+                  <a href="asset.html">Asset Details</a>
+                  <a href="interest.html">TVR</a>
+                
+                  <a href="verification.html">Verification Initiation</a>
+                  <a href="Approval.html">Approval</a>
+                  <a href="query.html">Query Initiation</a>
+                  <a href="notepad.html">Notepad</a>
+                  
+                 
+                  
+                  <a href="repayment.html">Repayment</a>
+                 
+                  <a href="sanction.html">Sanction Amount</a>
+                  <a href="undewriter.html">UnderWriter </a>
+                </div>
+                <div class ="projects-section">
+                  
+                 <fieldset class="field">
+                    <legend>
+                        Approval</legend>
+                        
+  
+                        <table class ="form">
+                            <tr>
+                                <td><label>Product</label></td><td><input type="text" ></td>
+                            </tr>
+                            <tr>
+                                <td><label>Credit Type</label></td><td><input type="text" ></td>
+                            </tr>
+                            <tr>
+                                <td><label>Requested Loan Amount with Insurance</label></td><td><input type="text" ></td>
+                            </tr>
+                            <tr>
+                                <td><label>Sanctioned Amount</label></td><td><input type="text" ></td>
+                            </tr>
+                           
+                        </table>
+                        <button class="button" id="reject">Reject</button>
+                    <button class="button">Proceed</button>
+                        
+                      
+              </fieldset>
+                </div>
+            </div>
+
+</body>
+
+</html>
